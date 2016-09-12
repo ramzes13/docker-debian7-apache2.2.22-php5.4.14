@@ -4,7 +4,7 @@ MAINTAINER ramzes13 <petru.darii@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && yes | apt-get install curl wget nano mc build-essential checkinstall zip adduser
+RUN apt-get update && yes | apt-get install curl wget nano mc build-essential checkinstall zip adduser gdebi-core
 
 RUN yes | apt-get install php5 libapache2-mod-php5 \
           php5-fpm php5-cli php5-mysqlnd php5-pgsql php5-sqlite \
