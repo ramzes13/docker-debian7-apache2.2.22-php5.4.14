@@ -1,4 +1,4 @@
-FROM debian:7.11
+FROM nimmis/debian:wheezy
 
 MAINTAINER ramzes13 <petru.darii@gmail.com>
 
@@ -13,7 +13,7 @@ RUN yes | apt-get install php5 libapache2-mod-php5 \
 RUN a2enmod rewrite \
     && echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-RUN wget -qO - http://docs.mongodb.org/10gen-gpg-key.asc?_ga=1.10989044.1320971647.1473661782 | apt-key add -
+RUN wget --no-check-certificate -qO - http://docs.mongodb.org/10gen-gpg-key.asc?_ga=1.10989044.1320971647.1473661782 | apt-key add -
 
 RUN echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
 
