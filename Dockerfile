@@ -43,3 +43,5 @@ RUN yes | pecl install xdebug \
     && echo "xdebug.remote_port=9000" >> /etc/php5/cli/php.ini \
     && echo "xdebug.max_nesting_level=300" >> /etc/php5/cli/php.ini \
     && echo "xdebug.remote_connect_back=1" >> /etc/php5/cli/php.ini
+
+RUN yes | apt-get install imagemagick
