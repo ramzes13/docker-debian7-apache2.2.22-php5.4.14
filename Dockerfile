@@ -45,3 +45,4 @@ RUN yes | pecl install xdebug \
     && echo "xdebug.remote_connect_back=1" >> /etc/php5/cli/php.ini
 
 RUN yes | apt-get install imagemagick
+RUN apt-get update && yes | apt-get install apt-utils curl wget nano mc apt-transport-https ca-certificates procps
